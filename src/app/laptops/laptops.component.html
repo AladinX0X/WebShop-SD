@@ -1,0 +1,17 @@
+<body>
+  <div class="card laptops" style="width: 16rem;" *ngFor="let laptops of (filteredLaptops.length ? filteredLaptops : Laptops)">
+    <img src="{{laptops.img}}"  class="card-img-top images">
+    <div class="card-body">
+      <h5 class="card-title">{{laptops.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{'data.price' | translate}} {{laptops.price}}</li>
+      <li class="list-group-item">{{'data.memory' | translate}} {{laptops.memory}}</li>
+      <li class="list-group-item">{{'data.ram' | translate}} {{laptops.RAM}}</li>
+      <li class="list-group-item">{{'data.color' | translate}} {{laptops.color}}</li>
+    </ul>
+    <div class="card-body">
+      <a type="button" class="card-link" [routerLink]="['/laptops/details/' + laptops.id]">{{'data.details' | translate}}</a>
+    </div>
+  </div>
+</body>

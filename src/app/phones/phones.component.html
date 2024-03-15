@@ -1,0 +1,99 @@
+<body>
+  <div class="card phones" style="width: 16rem;" *ngFor="let phones of (filteredPhones.length ? filteredPhones : Phones)">
+    <img src="{{phones.img}}"  class="card-img-top images" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{phones.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{'data.price' | translate}} {{phones.price}}</li>
+      <li class="list-group-item">{{'data.memory' | translate}} {{phones.memory}}</li>
+      <li class="list-group-item">{{'data.ram' | translate}} {{phones.RAM}}</li>
+      <li class="list-group-item">{{'data.color' | translate}} {{phones.color}}</li>
+    </ul>
+    <div class="card-body">
+      <a type="button" class="card-link" [routerLink]="['/phones/details/' + phones.id]">{{'data.details' | translate}}</a>
+    </div>
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

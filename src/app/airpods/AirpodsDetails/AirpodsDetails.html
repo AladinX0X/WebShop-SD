@@ -1,0 +1,40 @@
+<body>
+  <div class="card mb-3 airpods" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-12">
+        <div  class="img-fluid rounded-start">
+          <lib-ngx-image-zoom
+            [thumbImage] = [[selectedAirpods.img]]
+            [fullImage]= [[selectedAirpods.img]]
+            [magnification]="1"
+            [enableScrollZoom]="true"
+            [enableLens]="true"
+            [lensWidth]="300"
+            [lensHeight]="300"
+            [circularLens]="true"
+          ></lib-ngx-image-zoom>
+        </div>
+      </div>
+      <div class="card-photos">
+        <img (click)="changeimg(selectedAirpods.firstPhoto)" src="{{selectedAirpods.firstPhoto}}">
+        <img (click)="changeimg(selectedAirpods.secondPhoto)" src="{{selectedAirpods.secondPhoto}}">
+        <img (click)="changeimg(selectedAirpods.thirdPhoto)" src="{{selectedAirpods.thirdPhoto}}">
+        <img (click)="changeimg(selectedAirpods.fourthPhoto)" src="{{selectedAirpods.fourthPhoto}}">
+        <img (click)="changeimg(selectedAirpods.fifthPhoto)" src="{{selectedAirpods.fifthPhoto}}">
+      </div>
+      <div class="col-md-12">
+        <div class="card-body">
+          <h5 class="card-title">{{selectedAirpods.name}}</h5>
+          <p class="card-text">{{'data.price' | translate}} {{selectedAirpods.price}}</p>
+          <p class="card-text">{{'data.year' | translate}} {{selectedAirpods.year}}</p>
+          <p class="card-text">{{'data.color' | translate}} {{selectedAirpods.color}}</p>
+          <p class="card-text">{{'data.audio' | translate}} {{selectedAirpods.system}}</p>
+          <p class="card-text">{{'data.voiceAsisstant' | translate}} {{selectedAirpods.voice}}</p>
+          <p class="card-text">{{'data.weight' | translate}} {{selectedAirpods.weight}}</p>
+          <p class="card-text">{{'data.inStock' | translate}} {{selectedAirpods.inStock}}</p>
+          <button (click)="addProductToCart(selectedAirpods)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

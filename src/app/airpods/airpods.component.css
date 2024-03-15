@@ -1,0 +1,231 @@
+body {
+  background-image: url("/././assets/backgrounddd.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #000000 rgb(255, 255, 255);
+  }
+
+  *::-webkit-scrollbar {
+    width: 17px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 21px;
+    border: 2px solid #4f4f4f;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+.airpods {
+  display: inline-flex;
+  border: 1px double black;
+  border-radius: 20px;
+  left: 5px;
+  margin: 20px;
+  padding-top: 50px;
+}
+
+a {
+  border: 1px outset rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.images:hover {
+  transform: scale(1.1);
+  background-color: white !important;
+  letter-spacing: 2px;
+  transition: all 0.3s ease 0s;
+  border: 1px black;
+  border-radius: 10px;
+}
+
+
+
+h5{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  padding-top: 18px;
+}
+
+h5:hover, h5:focus, h5:active {
+  -webkit-animation-name: buzz-out-on-hover;
+  animation-name: buzz-out-on-hover;
+  -webkit-animation-duration: 0s;
+  animation-duration: 0s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  color: rgb(75, 74, 74);
+}
+
+li{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+li:hover, li:focus, li:active {
+  -webkit-animation-name: wobble-to-bottom-right-on-hover;
+  animation-name: wobble-to-bottom-right-on-hover;
+  -webkit-animation-duration: 0s;
+  animation-duration: 0s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@-webkit-keyframes wobble-to-bottom-right-on-hover {
+  16.65% {
+    -webkit-transform: translate(8px, 8px);
+    transform: translate(8px, 8px);
+  }
+  33.3% {
+    -webkit-transform: translate(-6px, -6px);
+    transform: translate(-6px, -6px);
+  }
+  49.95% {
+    -webkit-transform: translate(4px, 4px);
+    transform: translate(4px, 4px);
+  }
+  66.6% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  83.25% {
+    -webkit-transform: translate(1px, 1px);
+    transform: translate(1px, 1px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+@keyframes wobble-to-bottom-right-on-hover {
+  16.65% {
+    -webkit-transform: translate(8px, 8px);
+    transform: translate(8px, 8px);
+  }
+  33.3% {
+    -webkit-transform: translate(-6px, -6px);
+    transform: translate(-6px, -6px);
+  }
+  49.95% {
+    -webkit-transform: translate(4px, 4px);
+    transform: translate(4px, 4px);
+  }
+  66.6% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  83.25% {
+    -webkit-transform: translate(1px, 1px);
+    transform: translate(1px, 1px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes wobble-skew-on-hover {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+@keyframes wobble-skew-on-hover {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+
+a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  text-decoration: none;
+  color: rgb(8, 8, 8);
+  padding: 5px;
+}
+a:hover, a:focus,a:active {
+  -webkit-animation-name: wobble-skew-on-hover;
+  animation-name: wobble-skew-on-hover;
+  -webkit-animation-duration: 0s;
+  animation-duration: 0s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+

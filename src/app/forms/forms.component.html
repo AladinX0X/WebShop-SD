@@ -1,0 +1,51 @@
+<body>
+  <form #formName="ngForm">
+    <div class="secondSection">
+      <img src="/././assets/support.png">
+    </div>    
+    <div class="form-group d-block mx-auto form-div">
+      <label class="labels" for="exampleInputEmail1">{{'data.writeMail' | translate}}</label>
+      <input type="email" required email="true" [(ngModel)]='form.mail' name="mail" #mail="ngModel" class="form-control inputs" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{'data.mail' | translate}}">
+      <div class="w-50" *ngIf="mail.errors?.['email']">
+        <p class="mail-format mail-text">{{'data.mailFormat' | translate}}</p>
+      </div>
+      <div *ngIf="mail.errors?.['required']">
+        <p class="mail-text">{{'data.inputField' | translate}}</p>
+      </div>
+    </div>
+    <div class="form-group d-block mx-auto form-div">
+      <label class="labels" for="exampleInputPassword1">{{'data.enterName' | translate}}</label>
+      <input required type="text" [(ngModel)]='form.name' name="name" #name="ngModel" class="form-control inputs" id="exampleInputPassword1" placeholder="{{'data.name' | translate}}">
+      <div *ngIf="name.errors?.['required']">
+        <p class="mail-text">{{'data.inputField' | translate}}</p>
+      </div>
+    </div>
+
+    <div class="form-group d-block mx-auto form-div">
+      <label class="labels" for="exampleInputPassword1">{{'data.enterlastName' | translate}}</label>
+      <input type="text" required [(ngModel)]='form.lastName' #lastName="ngModel" name="lastName" class="form-control inputs" id="exampleInputPassword1" placeholder="{{'data.lastname' | translate}}">
+      <div *ngIf="lastName.errors?.['required']">
+        <p class="text-center mail-text">{{'data.inputField' | translate}}</p>
+      </div>
+    </div>
+    <div class="form-group d-block mx-auto form-div-second">
+      <label class="labels" for="exampleInputPassword1">{{'data.opinion' | translate}}</label>
+      <input type="text" required minlength="20" [(ngModel)]='form.opinion' #opinion="ngModel" name="opinion" class="form-control inputs" id="exampleInputPassword1"   placeholder="{{'data.text' | translate}}">
+      <div *ngIf="opinion.errors?.['required']">
+        <p class="mail-text">{{'data.inputField' | translate}}</p>
+      </div>
+      <div *ngIf="opinion.errors?.['minlength']">
+        <p class="text-center mail-text">{{'data.minLength' | translate}}</p>
+      </div>
+    </div>
+
+    <div class="form-group d-block mx-auto form-div-second">
+      <label class="labels" for="exampleInputPassword1">{{'data.changes' | translate}}</label>
+      <input type="text" minlength="20" [(ngModel)]="form.changes" #changes="ngModel" name="changes" class="form-control inputs" id="exampleInputPassword1"   placeholder="{{'data.text' | translate}}">
+      <div *ngIf="changes.errors?.['minlength']">
+        <p class="text-center mail-text">{{'data.minLength' | translate}}</p>
+      </div>
+    </div>
+    <button type="submit" (click)="submitForm()"  class="btn btn-primary d-block mx-auto" [disabled] = "formName.invalid" [ngClass]="{'bg-danger': formName.invalid}">{{'data.submit' | translate}}</button>
+  </form>
+</body>

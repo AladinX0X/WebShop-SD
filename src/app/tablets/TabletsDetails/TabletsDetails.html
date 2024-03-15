@@ -1,0 +1,41 @@
+<body>
+  <div class="card mb-3 tablets" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-12">
+        <div  class="img-fluid rounded-start">
+          <lib-ngx-image-zoom
+            [thumbImage] = [[selectedTablets.img]]
+            [fullImage]= [[selectedTablets.img]]
+            [magnification]="1"
+            [enableScrollZoom]="true"
+            [enableLens]="true"
+            [lensWidth]="300"
+            [lensHeight]="300"
+            [circularLens]="true"
+          ></lib-ngx-image-zoom>
+        </div>
+      </div>
+      <div class="card-photos">
+        <img (click)="changeimg(selectedTablets.firstPhoto)" src="{{selectedTablets.firstPhoto}}">
+        <img (click)="changeimg(selectedTablets.secondPhoto)" src="{{selectedTablets.secondPhoto}}">
+        <img (click)="changeimg(selectedTablets.thirdPhoto)" src="{{selectedTablets.thirdPhoto}}">
+        <img (click)="changeimg(selectedTablets.fourthPhoto)" src="{{selectedTablets.fourthPhoto}}">
+        <img (click)="changeimg(selectedTablets.fifthPhoto)" src="{{selectedTablets.fifthPhoto}}">
+      </div>
+      <div class="col-md-12">
+        <div class="card-body">
+          <h5 class="card-title">{{selectedTablets.name}}</h5>
+          <p class="card-text">{{'data.price' | translate}} {{selectedTablets.price}}</p>
+          <p class="card-text">{{'data.memory' | translate}} {{selectedTablets.memory}}</p>
+          <p class="card-text">{{'data.color' | translate}} {{selectedTablets.color}}</p>
+          <p class="card-text">{{'data.ram' | translate}} {{selectedTablets.RAM}}</p>
+          <p class="card-text">{{'data.year' | translate}} {{selectedTablets.year}}</p>
+          <p class="card-text">{{'data.resolution' | translate}} {{selectedTablets.resolution}}</p>
+          <p class="card-text">{{'data.camera' | translate}} {{selectedTablets.camera}}</p>
+          <p class="card-text">{{'data.inStock' | translate}} {{selectedTablets.inStock}}</p>
+          <button (click)="addProductToCart(selectedTablets)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

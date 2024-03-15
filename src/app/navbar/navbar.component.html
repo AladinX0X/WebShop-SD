@@ -1,0 +1,52 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img class="border border-light logo-img" src="../assets/logo.jpg" width="5%">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        
+        <li class="nav-item  d-grid gap-10">
+          <a class="nav-link active text-white p-4" aria-current="page"  [routerLink]="''" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="'active'" [class.active]="isActive('/')" >{{'data.homePage' | translate}}</a>
+        </li>
+        
+        <li class="nav-item  d-grid gap-10 ">
+          <a class="nav-link text-white p-4" [routerLink]="'about'"   [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">{{'data.aboutUs' | translate}}</a>
+        </li>
+        
+        <li class="nav-item  d-grid gap-10 ">
+          <a class="nav-link p-4 text-white" [routerLink]="'form'"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">{{'data.fillForm' | translate}}</a>
+        </li>
+        
+        <li class="nav-item dropdown  d-grid gap-10">
+          <a class="nav-link dropdown-toggle text-white p-4" [class.products-active]="isProductsActive()" [routerLinkActive]="'products-active'" aria-expanded="false" [routerLinkActiveOptions]="{ exact: true }">
+            {{'data.products' | translate}}
+          </a>
+          <ul class="dropdown-menu bg-dark text-white dropdown">
+            <li><a class="dropdown-item items text-white text-center" [routerLink]="'phones'" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="'dropdown-active'">{{'data.phones' | translate}}</a></li>
+            <li><a class="dropdown-item items text-white text-center" [routerLink]="'laptops'" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="'dropdown-active'">{{'data.laptops' | translate}}</a></li>
+            <li><a class="dropdown-item items text-white text-center" [routerLink]="'tabs'" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="'dropdown-active'" >{{'data.tabs' | translate}}</a></li>
+            <li><a class="dropdown-item items text-white text-center" [routerLink]="'watches'" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="'dropdown-active'">{{'data.watches' | translate}}</a></li>
+            <li><a class="dropdown-item items text-white text-center" [routerLink]="'airpods'" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="'dropdown-active'">{{'data.airpods' | translate}}</a></li>
+            <li><a class="dropdown-item items text-white text-center" [routerLink]="'accessories'" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="'dropdown-active'">{{'data.accessories' | translate}}</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <form class="d-flex">
+        <input class="form-control me-2 border border-white" [(ngModel)]="searchQuery" id="searchQuery"  name="searchQuery"  placeholder="{{ 'data.searchPlaceholder' | translate }}" aria-label="Search" >
+        <button class="btn btn-outline-light" id="search" (click)="searchProducts()">{{ 'data.searchButton' | translate }}</button>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <a routerLink="/cart" class="nav-link cart-icon">
+          <i class="fa fa-shopping-cart"></i> Cart
+        </a>
+        
+      </form>
+    </div>
+  </div>
+</nav>
+

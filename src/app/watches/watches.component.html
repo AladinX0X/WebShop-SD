@@ -1,0 +1,18 @@
+<body>
+    <div class="card watches" style="width: 16rem;" *ngFor="let watches of (filteredWatches.length ? filteredWatches : Watches)">
+    <img src="{{watches.img}}"  class="card-img-top images">
+    <div class="card-body">
+      <h5 class="card-title">{{watches.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{'data.price' | translate}} {{watches.price}}</li>
+      <li class="list-group-item">{{'data.year' | translate}} {{watches.year}}</li>
+      <li class="list-group-item">{{'data.color' | translate}} {{watches.color}}</li>
+      <li class="list-group-item">{{'data.size' | translate}} {{watches.size}}</li>
+    </ul>
+    <div class="card-body">
+      <a type="button" class="card-link" [routerLink]="['/watches/details/' + watches.id]">{{'data.details' | translate}}</a>
+    </div>
+  </div>
+</body>
+

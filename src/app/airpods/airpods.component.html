@@ -1,0 +1,16 @@
+<body>
+  <div class="card airpods" style="width: 16rem;" *ngFor="let airpods of (filteredAirpods.length ? filteredAirpods : Airpods)">
+    <img src="{{airpods.img}}"  class="card-img-top images">
+    <div class="card-body">
+      <h5 class="card-title">{{airpods.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{'data.price' | translate}} {{airpods.price}}</li>
+      <li class="list-group-item">{{'data.year' | translate}} {{airpods.year}}</li>
+      <li class="list-group-item">{{'data.color' | translate}} {{airpods.color}}</li>
+    </ul>
+    <div class="card-body">
+      <a type="button" class="card-link" [routerLink]="['/airpods/details/' + airpods.id]">{{'data.details' | translate}}</a>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,17 @@
+<body>
+  <div class="card tablets" style="width: 16rem;" *ngFor="let tablets of (filteredTablets.length ? filteredTablets : Tablets)">
+    <img src="{{tablets.img}}"  class="card-img-top images">
+    <div class="card-body">
+      <h5 class="card-title">{{tablets.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{'data.price' | translate}} {{tablets.price}}</li>
+      <li class="list-group-item">{{'data.memory' | translate}} {{tablets.memory}}</li>
+      <li class="list-group-item">{{'data.ram' | translate}} {{tablets.RAM}}</li>
+      <li class="list-group-item">{{'data.color' | translate}} {{tablets.color}}</li>
+    </ul>
+    <div class="card-body">
+      <a type="button" class="card-link" [routerLink]="['/tabs/details/' + tablets.id]">{{'data.details' | translate}}</a>
+    </div>
+  </div>
+</body>

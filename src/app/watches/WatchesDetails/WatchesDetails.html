@@ -1,0 +1,41 @@
+<body>
+  <div class="card mb-10 watches" style="max-width: 580px;">
+    <div class="row g-0">
+      <div class="col-md-10 ">
+        <div  class="img-fluid rounded-start">
+          <lib-ngx-image-zoom
+            [thumbImage] = [[selectedWatches.img]]
+            [fullImage]= [[selectedWatches.img]]
+            [magnification]="2"
+            [enableScrollZoom]="true"
+            [enableLens]="true"
+            [lensWidth]="300"
+            [lensHeight]="300"
+            [circularLens]="true"
+          ></lib-ngx-image-zoom>
+        </div>
+      </div>
+      <div class="card-photos">
+        <img (click)="changeimg(selectedWatches.firstPhoto)" src="{{selectedWatches.firstPhoto}}">
+        <img (click)="changeimg(selectedWatches.secondPhoto)" src="{{selectedWatches.secondPhoto}}">
+        <img (click)="changeimg(selectedWatches.thirdPhoto)" src="{{selectedWatches.thirdPhoto}}">
+        <img (click)="changeimg(selectedWatches.fourthPhoto)" src="{{selectedWatches.fourthPhoto}}">
+        <img (click)="changeimg(selectedWatches.fifthPhoto)" src="{{selectedWatches.fifthPhoto}}">
+      </div>
+      <div class="col-md-10 ">
+        <div class="card-body">
+          <h5 class="card-title">{{selectedWatches.name}}</h5>
+          <p class="card-text">{{'data.price' | translate}} {{selectedWatches.price}}</p>
+          <p class="card-text">{{'data.year' | translate}} {{selectedWatches.year}}</p>
+          <p class="card-text">{{'data.color' | translate}} {{selectedWatches.color}}</p>
+          <p class="card-text">{{'data.size' | translate}} {{selectedWatches.size}}</p>
+          <p class="card-text">Bluetooth: {{selectedWatches.bluetooth}}</p>
+          <p class="card-text">Wi-Fi: {{selectedWatches.wifi}}</p>
+          <p class="card-text">{{'data.cpu' | translate}} {{selectedWatches.cpu}}</p>
+          <p class="card-text">{{'data.inStock' | translate}} {{selectedWatches.inStock}}</p>
+          <button (click)="addProductToCart(selectedWatches)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

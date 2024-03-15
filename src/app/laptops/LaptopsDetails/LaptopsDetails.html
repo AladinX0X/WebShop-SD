@@ -1,0 +1,42 @@
+<body>
+  <div class="card mb-8 laptops" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-12">
+        <div  class="img-fluid rounded-start">
+          <lib-ngx-image-zoom
+            [thumbImage] = [[selectedLaptops.img]]
+            [fullImage]= [[selectedLaptops.img]]
+            [magnification]="1"
+            [enableScrollZoom]="true"
+            [enableLens]="true"
+            [lensWidth]="300"
+            [lensHeight]="300"
+            [circularLens]="true"
+          ></lib-ngx-image-zoom>
+        </div>
+      </div>
+      <div class="card-photos">
+        <img (click)="changeimg(selectedLaptops.firstPhoto)" src="{{selectedLaptops.firstPhoto}}">
+        <img (click)="changeimg(selectedLaptops.secondPhoto)" src="{{selectedLaptops.secondPhoto}}">
+        <img (click)="changeimg(selectedLaptops.thirdPhoto)" src="{{selectedLaptops.thirdPhoto}}">
+        <img (click)="changeimg(selectedLaptops.fourthPhoto)" src="{{selectedLaptops.fourthPhoto}}">
+        <img (click)="changeimg(selectedLaptops.fifthPhoto)" src="{{selectedLaptops.fifthPhoto}}">
+      </div>
+      <div class="col-md-12">
+        <div class="card-body">
+          <h5 class="card-title">{{selectedLaptops.name}}</h5>
+          <p class="card-text">{{'data.price' | translate}} {{selectedLaptops.price}}</p>
+          <p class="card-text">{{'data.memory' | translate}} {{selectedLaptops.memory}}</p>
+          <p class="card-text">{{'data.color' | translate}} {{selectedLaptops.color}}</p>
+          <p class="card-text">{{'data.ram' | translate}} {{selectedLaptops.RAM}}</p>
+          <p class="card-text">{{'data.year' | translate}} {{selectedLaptops.year}}</p>
+          <p class="card-text">{{'data.resolution' | translate}} {{selectedLaptops.resolition}}</p>
+          <p class="card-text">{{'data.camera' | translate}} {{selectedLaptops.camera}}</p>
+          <p class="card-text">{{'data.battery' | translate}} {{selectedLaptops.battery}}</p>
+          <p class="card-text">{{'data.inStock' | translate}} {{selectedLaptops.inStock}}</p>
+          <button (click)="addProductToCart(selectedLaptops)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

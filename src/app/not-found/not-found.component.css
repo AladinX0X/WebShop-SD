@@ -1,0 +1,38 @@
+.btn-not-found {
+  border: 10px solid white;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+
+.not-found-img {
+  padding-bottom: 10px;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #000000 red;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 17px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #03045e;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 21px;
+    border: 2px solid #4f4f4f;
+  }
+
+  body {
+    overflow-x: hidden;
+  }

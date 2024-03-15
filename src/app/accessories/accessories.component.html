@@ -1,0 +1,16 @@
+<body>
+  <div class="card accessories" style="width: 16rem;" *ngFor="let accessories of (filteredAccessories.length ? filteredAccessories : Accessories)">
+    <img src="{{accessories.img}}"  class="card-img-top images">
+    <div class="card-body">
+      <h5 class="card-title">{{accessories.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{'data.price' | translate}} {{accessories.price}}</li>
+      <li class="list-group-item">{{'data.color' | translate}} {{accessories.color}}</li>
+    </ul>
+    <div class="card-body">
+      <a type="button" class="card-link" [routerLink]="['/accessories/details/' + accessories.id]">{{'data.details' | translate}}</a>
+    </div>
+  </div>
+</body>
+

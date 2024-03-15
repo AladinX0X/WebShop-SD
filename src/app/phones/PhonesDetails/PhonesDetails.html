@@ -1,0 +1,47 @@
+<body>
+  <div class="card mb-8 phones" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-8">
+        <div  class="img-fluid rounded-start">
+        <lib-ngx-image-zoom
+          [thumbImage] = [[selectedPhones.img]]
+          [fullImage]= [[selectedPhones.img]]
+          [magnification]="1"
+          [enableScrollZoom]="true"
+          [enableLens]="true"
+          [lensWidth]="300"
+          [lensHeight]="300"
+          [circularLens]="true"
+        ></lib-ngx-image-zoom>
+      </div>
+      </div>
+      <div class="card-photos">
+        <img (click)="changeimg(selectedPhones.firstPhoto)" src="{{selectedPhones.firstPhoto}}">
+        <img (click)="changeimg(selectedPhones.secondPhoto)" src="{{selectedPhones.secondPhoto}}">
+        <img (click)="changeimg(selectedPhones.thirdPhoto)" src="{{selectedPhones.thirdPhoto}}">
+        <img (click)="changeimg(selectedPhones.fourthPhoto)" src="{{selectedPhones.fourthPhoto}}">
+        <img (click)="changeimg(selectedPhones.fifthPhoto)" src="{{selectedPhones.fifthPhoto}}">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{selectedPhones.name}}</h5>
+          <p class="card-text">{{'data.price' | translate}} {{selectedPhones.price}}</p>
+          <p class="card-text">{{'data.memory' | translate}} {{selectedPhones.memory}}</p>
+          <p class="card-text">{{'data.color' | translate}} {{selectedPhones.color}}</p>
+          <p class="card-text">{{'data.ram' | translate}} {{selectedPhones.RAM}}</p>
+          <p class="card-text">{{'data.camera' | translate}} {{selectedPhones.camera}}</p>
+          <p class="card-text">{{'data.size' | translate}} {{selectedPhones.size}}</p>
+          <p class="card-text">{{'data.resolution' | translate}} {{selectedPhones.resolution}}</p>
+          <p class="card-text">{{'data.inStock' | translate}} {{selectedPhones.inStock}}</p>
+          <button (click)="addProductToCart(selectedPhones)">Add to Cart</button>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
